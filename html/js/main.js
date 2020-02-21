@@ -128,26 +128,26 @@ jQuery(window).on('resize', function() {
 	$container.isotope({
 	  itemSelector: '.product-grid'
 	});
-	// filter items when filter link is clicked
-	jQuery('.product-list-filter a').on('click', function(){
-		jQuery('.product-list-filter a').removeClass('active');
-		jQuery(this).addClass('active');
-	  var selector = jQuery(this).attr('data-filter');
-	  $container.isotope({ filter: selector });
-	  return false;
-	});
+	// // filter items when filter link is clicked
+	// jQuery('.product-list-filter a').on('click', function(){
+	// 	jQuery('.product-list-filter a').removeClass('active');
+	// 	jQuery(this).addClass('active');
+	//   var selector = jQuery(this).attr('data-filter');
+	//   $container.isotope({ filter: selector });
+	//   return false;
+	// });
 	// product image lightbox
-	$('.mfp-image').magnificPopup({
-		type:"image",
-		removalDelay: 500,
-		callbacks: {
-		   beforeOpen: function() {
-		     // just a hack that adds mfp-anim class to markup 
-		      this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-		      this.st.mainClass = this.st.el.attr('data-effect');
-		   }
-		 },
-		 closeOnContentClick: true,
-		 midClick: true
-	});
+	// $('.mfp-image').magnificPopup({
+	// 	type:"image",
+	// 	removalDelay: 500,
+	// 	callbacks: {
+	// 	   beforeOpen: function() {
+	// 	     // just a hack that adds mfp-anim class to markup 
+	// 	      this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+	// 	      this.st.mainClass = this.st.el.attr('data-effect');
+	// 	   }
+	// 	 },
+	// 	 closeOnContentClick: true,
+	// 	 midClick: true
+	// });
 });
